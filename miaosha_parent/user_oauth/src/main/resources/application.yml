@@ -1,0 +1,44 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: user-oauth
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/pinyougoudb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+  thymeleaf:
+    suffix: .html
+    encoding: UTF-8
+    cache: false
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 42.194.147.155:8848
+  redis:
+    host: 42.194.147.155
+  main:
+    allow-bean-definition-overriding: true
+
+auth:
+  ttl: 3600  #token存储到redis的过期时间
+  clientId: miaosha
+  clientSecret: bainianzhi
+  cookieDomain: 127.0.0.1
+  cookieMaxAge: -1
+  refreshToken: 7200
+encrypt:
+  key-store:
+    location: classpath:/bainianzhi.jks
+    secret: bainianzhi
+    alias: bainianzhi
+    password: bainianzhi
+feign:
+  httpclient:
+    enabled: true
+#  okhttp:
+mybatis-plus:
+  type-aliases-package: com.bnz.miaosha.oauth.domain
+  mapper-locations: classpath:mapper/*.xml
+#    enabled: true

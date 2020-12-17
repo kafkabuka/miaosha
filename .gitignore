@@ -1,0 +1,9 @@
+# Project exclude paths
+/miaosha_parent/common/target/
+/miaosha_parent/gateway/gateway_web/target/
+/miaosha_parent/service/service_seckill/target/
+/miaosha_parent/service/service_user/target/
+/miaosha_parent/service_api/service_seckill_api/target/
+/miaosha_parent/service_api/service_system_api/target/
+/miaosha_parent/service_api/service_user_api/target/
+/miaosha_parent/user_oauth/target/
